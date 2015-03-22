@@ -1,0 +1,14 @@
+package leetcode_solution;
+
+public class longestsubstring {
+	public static void main(String [ ] args){
+		
+	}
+	
+	public static int lengthOfLongestSubstring(String s){
+		int len=0;
+		
+		
+		return len;
+	}
+}
