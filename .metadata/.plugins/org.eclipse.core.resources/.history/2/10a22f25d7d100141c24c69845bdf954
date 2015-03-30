@@ -1,0 +1,38 @@
+package leetcode_solution;
+
+public class zigzagString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print(Convert("PAYPALISHIRING",5));
+	}
+
+	public static String Convert(String s, int nRows){
+		String finalStr="";
+		if(nRows>1){
+			String[] eachRow=new String[nRows];
+			for(int i=0; i<eachRow.length;i++){
+				eachRow[i]="";
+			}
+			int fo=2*nRows-2;
+			for(int i=0;i<s.length();i++){
+				if(i%fo<=nRows-1){
+					eachRow[i%fo]+=s.charAt(i);
+					System.out.print("row"+i%fo+" is: "+eachRow[i%fo]+"\n");
+				}else{
+					System.out.print("i "+i +" fo "+fo+" "+(i%fo-2)+"\n");
+					eachRow[fo-i%fo]+=s.charAt(i);
+					System.out.print("row"+(i%fo-2)+" is: "+eachRow[i%fo-2]+"\n");
+				}
+				
+			}
+			
+			for(int i=0; i<eachRow.length;i++){
+				finalStr+=eachRow[i];
+			}
+		}else{
+			finalStr=s;
+		}
+		return finalStr;
+	}
+}

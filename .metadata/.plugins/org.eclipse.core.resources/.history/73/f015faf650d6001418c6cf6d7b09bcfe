@@ -1,0 +1,41 @@
+package sort;
+
+public class preQuick {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int score[] ={9,5,1,3,4,7,8,6,2};
+		for(int i=0;i<score.length;i++){
+			System.out.print(" "+score[i]);
+		}
+		System.out.println(" ");
+		divi(score, 4);
+	}
+	
+	public static void divi(int arr[], int divi){
+		int pivot=arr[divi];
+		int low=0;
+		int high=arr.length-1;
+		int count=0;
+		while(low<high){
+			count++;
+			while(arr[low]<pivot){
+				low++;
+			}
+			while(arr[high]>pivot){
+				high--;
+			}
+			int temp=arr[low];
+			arr[low]=arr[high];
+			arr[high]=temp;
+			for(int i=0;i<arr.length;i++){
+				System.out.print("count: "+count+" "+arr[i]);
+			}
+			System.out.println(" ");
+		}
+		
+		for(int i=0;i<arr.length;i++){
+			//System.out.print(" "+arr[i]);
+		}
+	}
+}

@@ -1,0 +1,27 @@
+package leetcode_solution;
+
+public class zigzagString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Convert("PAHNAPLSIIGYIR",3);
+	}
+
+	public static String Convert(String s, int nRows){
+		String[] eachRow=new String[nRows];
+		int fo=2*nRows-1;
+		for(int i=0;i<s.length();i++){
+			if(i%fo<=nRows){
+				eachRow[i%fo]+=s.charAt(i);
+			}else{
+				eachRow[nRows-i%nRows]+=s.charAt(i);
+			}
+			
+		}
+		String finalStr="";
+		for(int i=0; i<eachRow.length;i++){
+			finalStr+=eachRow[i];
+		}
+		return finalStr;
+	}
+}
