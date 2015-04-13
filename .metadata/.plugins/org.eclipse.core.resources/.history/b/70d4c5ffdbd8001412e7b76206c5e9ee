@@ -1,0 +1,13 @@
+package discount2;
+
+public class Context {
+
+	Discount discount;
+	public Context(Discount discount){
+		this.discount=discount;
+	}
+	
+	public double getTotal(){
+		return discount.getTotal();
+	}
+}

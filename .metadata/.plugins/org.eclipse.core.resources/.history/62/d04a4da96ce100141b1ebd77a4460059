@@ -1,0 +1,58 @@
+package rotateArray;
+
+import java.util.Arrays;
+
+public class RotateArray {
+	public static void main(String [ ] args){
+		int[] arr={1,2,3,4,5,6,7};
+		rotate(arr,3);
+	}
+	
+	public static void rotate2(int[] nums, int k){
+		k=k%(nums.length);
+		int[] arrayA=new int[nums.length-k];
+		int[] arrayB=new int[k];
+		int countA=0,countB=0;
+		for(int i=0;i<nums.length;i++){
+			if(i<((nums.length)-k)){
+				arrayA[countA]=nums[i];
+				countA++;
+			}else{
+				arrayB[countB]=nums[i];
+				countB++;
+			}
+		}
+		
+		for(int i=0;i<arrayB.length;i++){
+			nums[i]=arrayB[i];
+		}
+		for(int i=0;i<arrayA.length;i++){
+			nums[i+arrayB.length]=arrayA[i];
+		}
+		/*
+		for(int i=0;i<arrayA.length;i++){
+			System.out.print(" "+arrayA[i]);
+		}
+		System.out.println(" ");
+		for(int i=0;i<arrayB.length;i++){
+			System.out.print(" "+arrayB[i]);
+		}
+		System.out.println(" ");
+		*/
+		for(int i=0;i<nums.length;i++){
+			System.out.print(" "+nums[i]);
+		}
+		
+	}
+	
+	public static void rotate(int[] nums, int k){
+		k=k%(nums.length);
+		int[] arrayA=new int[nums.length-k];
+		int[] arrayB=new int[k];
+		
+		System.arraycopy(nums, 0, arrayA, 0, (nums.length-k));
+		System.arraycopy(nums, nums.length-k+1, arrayB, 0, k);
+		
+		
+	}
+}

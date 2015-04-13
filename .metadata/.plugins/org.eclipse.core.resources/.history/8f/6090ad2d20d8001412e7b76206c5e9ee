@@ -1,0 +1,14 @@
+package discount;
+
+public class discountPercentOff {
+
+	public double getTotal(double total, double limit, double percent){
+		double result=0;
+		if(total>limit){
+			result=total*(1-percent/100);
+		}else{
+			result=otal;
+		}
+		return result;
+	}
+}

@@ -1,0 +1,46 @@
+package atio;
+
+public class atio {
+	public static void main(String [ ] args){
+		System.out.println(atio("-+1"));
+	}
+	
+	public static int atio(String str){
+		
+		str=str.trim();
+		int number=0;
+		String str2int="";
+		boolean flag=true;
+		if(str==""){
+			number = 0;
+		}else{
+			for(int i=0;i<str.length();i++){
+				if(i==0 && str.charAt(i)=='-'){
+					str2int+="-";
+					flag=false;
+				}else if(i==0 && str.charAt(i)=='+'){
+					flag=true;
+				}else if(str.charAt(i)==' '){
+					continue;
+				}else if(Character.isDigit(str.charAt(i))){
+					str2int+=str.charAt(i)+"";
+				}else if(!Character.isDigit(str.charAt(i))){
+					break;
+				}
+			}
+			System.out.println("a"+str2int+"b");
+			if(str2int=="" || str2int =="-"){
+				number = 0;
+			}else{
+				try{
+					number=Integer.parseInt(str2int);
+				}catch(StackOverflowError e){
+					number=flag ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+				}
+			}
+			
+		}
+		
+		return number;
+	}
+}

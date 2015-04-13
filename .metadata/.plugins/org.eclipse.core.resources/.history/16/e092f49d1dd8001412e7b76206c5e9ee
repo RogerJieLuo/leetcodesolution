@@ -1,0 +1,12 @@
+package calculator;
+
+public class action {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		OperatorFactory of=new OperatorFactory();
+		Operator oper=of.getOperator("+");
+		
+	}
+
+}

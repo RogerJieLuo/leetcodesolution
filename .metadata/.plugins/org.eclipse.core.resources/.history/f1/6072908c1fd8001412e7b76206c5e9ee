@@ -1,0 +1,10 @@
+package discount;
+
+public class discountCashBack extends discount{
+
+	@override
+	public double getTotal(double total,double cashback){
+		double result=0;
+		
+	}
+}

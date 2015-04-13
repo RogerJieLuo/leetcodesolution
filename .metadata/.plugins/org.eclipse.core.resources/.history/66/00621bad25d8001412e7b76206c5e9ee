@@ -1,0 +1,17 @@
+package discount;
+
+public class DiscountCashBack extends Discount{
+
+	private double total=0;
+	public DiscountCashBack(double limit, double cashback){
+		if(originalTotal>limit){
+			total=originalTotal-cashback;
+		}else{
+			total=originalTotal;
+		}
+	}
+	
+	public double getTotal(){
+		return total;
+	}
+}

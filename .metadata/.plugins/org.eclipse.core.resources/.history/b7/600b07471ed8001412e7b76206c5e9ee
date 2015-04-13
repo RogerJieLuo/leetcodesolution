@@ -1,0 +1,11 @@
+package calculator;
+
+public class OperatorMultiple extends Operator {
+	private double numberA;
+	public double getResult(){
+		double result =0;
+		result=numberA*numberB;
+		return result;
+	}
+
+}

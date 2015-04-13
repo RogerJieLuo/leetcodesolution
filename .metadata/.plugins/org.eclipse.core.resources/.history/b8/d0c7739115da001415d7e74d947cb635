@@ -1,0 +1,9 @@
+package practice;
+
+public class rats {
+	public static int var1=10;
+	int var2=5;
+	public static void main(String[] args){
+		System.out.print(var1+" "+var2);
+	}
+}

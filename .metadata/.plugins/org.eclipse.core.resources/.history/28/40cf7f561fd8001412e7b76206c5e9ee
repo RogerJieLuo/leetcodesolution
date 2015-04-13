@@ -1,0 +1,8 @@
+package discount;
+
+public class discountCashBack extends discount{
+
+	public double getTotal(){
+		
+	}
+}

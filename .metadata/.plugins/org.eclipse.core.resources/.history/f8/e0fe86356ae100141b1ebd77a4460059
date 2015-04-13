@@ -1,0 +1,25 @@
+package rotateArray;
+
+public class RotateArray {
+	public static void main(String [ ] args){
+		
+	}
+	
+	public static void rotate(int[] nums, int k){
+		int move=k%nums.length;
+		int[] arrayA=new int[move];
+		int[] arrayB=new int[nums.length-move];
+		int countA=0,countB=0;
+		for(int i=0;i<nums.length;i++){
+			if(i<move){
+				arrayA[countA]=nums[i];
+				countA++;
+			}else{
+				arrayB[countB]=nums[i];
+				countB++;
+			}
+		}
+		
+		nums = ArrayUtils.addAll(arrayB, arrayA);
+	}
+}

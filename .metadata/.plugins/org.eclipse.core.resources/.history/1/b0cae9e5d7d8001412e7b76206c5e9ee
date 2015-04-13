@@ -1,0 +1,21 @@
+package discount2;
+
+public class action {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Discount dis=null;
+		Context context=new Context(dis);
+		String type;
+		switch(type){
+		case "percentoff":
+			context=new DiscountPercentOff(100,30);
+			break;
+		case "cashback":
+			context=new DiscountCashBack(100,50);
+			break;
+		}
+		
+	}
+
+}

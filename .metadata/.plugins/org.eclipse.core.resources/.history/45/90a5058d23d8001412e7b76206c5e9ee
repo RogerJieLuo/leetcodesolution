@@ -1,0 +1,14 @@
+package discount;
+
+public class DiscountFactory {
+
+	public Discount getDiscountType(String type){
+		Discount dis=null;
+		switch(type){
+		
+			case "percent":
+				//dis=new DiscountPercentOff();
+		}
+		return dis;
+	}
+}

@@ -1,0 +1,9 @@
+package calculator;
+
+public class OperatorMultiple {
+
+	public double OperatorMultiple (double a, double b){
+		return a*b;
+	}
+
+}

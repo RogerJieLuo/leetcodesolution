@@ -1,0 +1,32 @@
+package rotateArray;
+
+import java.util.Arrays;
+
+public class RotateArray {
+	public static void main(String [ ] args){
+		
+	}
+	
+	public static void rotate(int[] nums, int k){
+		int move=k%nums.length;
+		int[] arrayA=new int[move];
+		int[] arrayB=new int[nums.length-move];
+		int countA=0,countB=0;
+		for(int i=0;i<nums.length;i++){
+			if(i<move){
+				arrayA[countA]=nums[i];
+				countA++;
+			}else{
+				arrayB[countB]=nums[i];
+				countB++;
+			}
+		}
+		
+		for(int i=0;i<arrayB.length;i++){
+			nums[i]=arrayB[i];
+		}
+		for(int i=0;i<arrayA.length;i++){
+			nums[i+arrayB.length]=arrayA[i];
+		}
+	}
+}

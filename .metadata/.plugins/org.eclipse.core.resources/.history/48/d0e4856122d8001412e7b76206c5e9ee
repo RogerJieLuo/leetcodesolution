@@ -1,0 +1,9 @@
+package discount;
+
+public class Discount {
+
+	public double getTotal(double total){
+		
+		return total;
+	}
+}

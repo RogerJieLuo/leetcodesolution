@@ -1,0 +1,17 @@
+package atio;
+
+public class atio {
+	public static void main(String [ ] args){
+		
+	}
+	
+	public int atio(String str){
+		if(str.trim()==""){
+			return 0;
+		}else{
+			for(int i=0;i<str.trim().length();i++){
+				
+			}
+		}
+	}
+}

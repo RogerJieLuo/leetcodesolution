@@ -1,0 +1,29 @@
+package discount2;
+
+public class Context {
+
+	Discount discount;
+	protected double total;
+	
+	public Context(String type,double total){
+		switch(type){
+			case "percentoff":
+				discount=new DiscountPercentOff(100,30);
+				break;
+			case "cashback":
+				discount=new DiscountCashBack(100,50);
+				break;
+		}
+		//this.discount=discount;
+	}
+	
+	public double getTotal(){
+		return discount.getTotal();
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+	
+	
+}
